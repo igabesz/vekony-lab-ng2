@@ -4,7 +4,7 @@ import { loadConfig, ENV, CLI } from 'config-decorators';
 export class ServerConfig {
 	@ENV('SERVER_PORT', 'number')
 	@CLI('port', 'number')
-	port = 8080;
+	port = 8100;
 }
 
 export class LogConfig {

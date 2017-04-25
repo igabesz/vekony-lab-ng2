@@ -2,17 +2,19 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as Log from 'modular-log';
 import * as path from 'path';
+import * as http from 'http';
+import * as SocketIO from 'socket.io';
 import config from './config';
 
 
 let log: Log.Logger;
-let app: express.Express;
+let server: http.Server;
 let appStarted = false;
 
 
 function killProcess(reason: string, err: any) {
 	log ? log.fatal(reason, { err, msg: err.message }) : console.error(reason, err, err.message);
-	appStarted && (app as any).close();
+	appStarted && server.close();
 	setTimeout(() => process.exit(-1), 500);
 }
 
@@ -30,26 +32,25 @@ async function startServer() {
 	log = Log.createLogger('App');
 	log.info('Starting...');
 
-	// Setup express
-	log.debug('Preparing Express');
-	app = express();
-	app.use(bodyParser.json());
-
-
-	log.info('FileServer enabled');
-	/**
-	SERVING index.html
-	- Works for / or /<whatever>
-	*/
-	// Serving static files
-	app.use(express.static('public'));
-	app.get(/\/(\/.*)?$/, (req, res) => {
-		res.status(200).sendFile(path.join(__dirname, '../public/index.html'));
+	// HTTP Server
+	log.debug('Starting Server');
+	server = http.createServer((req, res) => {
+		// Send dummy response
+		res.writeHead(404, {'Content-Type': 'text/html'});
+		res.end('<h1>Aw, snap! 404</h1>');
 	});
 
-	// Starting server
-	log.debug('Starting Express');
-	app.listen(config.server.port, (err) => {
+	// SocketIO config
+	let io = SocketIO.listen(server);
+	io.on('connection', conn => {
+		log.info('Connection');
+		conn.on('message', msg => {
+			log.info('Message', msg);
+			io.emit('message', msg);
+		});
+	});
+
+	server.listen(config.server.port, (err) => {
 		if (err) {
 			return killProcess(`Cannot start server on port ${config.server.port}`, err);
 		}
