@@ -3,17 +3,25 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Route }	from '@angular/router';
-import { TooltipModule } from 'ng2-bootstrap';
+import { TooltipModule } from 'ngx-bootstrap';
 
 import { AlertService } from './services/alert.service';
 import { DownloadJokeService } from './services/download-joke.service';
 import { StorageService } from './services/storage.service';
 
 import { AppComponent }	from './app.component';
+import { HomeComponent } from './home.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
+
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const routes: Route[] = [{
 	path: '',
+	component: HomeComponent,
+}, {
+	path: 'joke-list',
 	component: JokeListComponent,
 }];
 
@@ -29,6 +37,7 @@ const routes: Route[] = [{
 	],
 	declarations: [
 		AppComponent,
+		HomeComponent,
 		JokeListComponent,
 	],
 	providers: [
