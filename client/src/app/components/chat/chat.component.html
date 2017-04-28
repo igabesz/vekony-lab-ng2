@@ -1,0 +1,16 @@
+<h2>Chat</h2>
+
+<div>
+	<span class="label label-success" *ngIf="connected">Connected</span>
+	<span class="label label-danger" *ngIf="!connected">Disconnected</span>
+</div>
+
+<textarea [(ngModel)]="msgText"></textarea>
+<br>
+<button class="btn btn-primary" (click)="sendMessage()">Send</button>
+
+<div class="chat-messages">
+	<div class="chat-msg" *ngFor="let msg of messages">
+		{{msg}}
+	</div>
+</div>

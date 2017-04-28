@@ -1,5 +1,4 @@
 import * as express from 'express';
-import * as bodyParser from 'body-parser';
 import * as Log from 'modular-log';
 import * as path from 'path';
 import * as http from 'http';

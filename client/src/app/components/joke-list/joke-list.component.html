@@ -1,0 +1,25 @@
+<h2>List of jokes</h2>
+
+<!-- Get a joke button -->
+<button class="btn btn-primary" (click)="downloadJokeByCb()">Get joke (cb)</button>
+<button class="btn btn-primary" (click)="downloadJokeByPromise()">Get joke (promise)</button>
+<button class="btn btn-primary" (click)="downloadJokeAsync()">Get joke (async)</button>
+<button class="btn btn-primary" (click)="downloadJokeByObservalbe()">Get joke (obs.)</button>
+<button class="btn btn-primary" (click)="downloadJokeBySharedObservable()">Get joke (shared obs.)</button>
+
+<!-- Table for jokes -->
+<table class="table table-striped">
+	<tr>
+		<th>ID</th>
+		<th>Joke</th>
+		<th>Is nerdy?</th>
+	</tr>
+
+	<tr *ngFor="let joke of jokes">
+		<td>{{joke.id}}</td>
+		<td>{{joke.joke}}</td>
+		<td>
+			<span *ngIf="joke.isNerdy" class="label label-info">Nerdy</span>
+		</td>
+	</tr>
+</table>

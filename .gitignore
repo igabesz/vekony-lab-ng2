@@ -2,6 +2,7 @@
 .code
 node_modules
 npm-debug.*
-app/**/*.js
+chat-server/**/*.js
 *.js.map
-public/dist/
+client/dist/
+client/src/**/*.js

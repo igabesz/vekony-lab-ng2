@@ -6,8 +6,5 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom", "es2015.promise" ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }

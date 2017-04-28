@@ -3,14 +3,13 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Route }	from '@angular/router';
-import { TooltipModule } from 'ngx-bootstrap';
 
 import { AlertService } from './services/alert.service';
 import { DownloadJokeService } from './services/download-joke.service';
-import { StorageService } from './services/storage.service';
 
 import { AppComponent }	from './app.component';
 import { HomeComponent } from './home.component';
+import { ChatComponent } from './components/chat/chat.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
 
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -23,27 +22,28 @@ const routes: Route[] = [{
 }, {
 	path: 'joke-list',
 	component: JokeListComponent,
+}, {
+	path: 'chat',
+	component: ChatComponent,
 }];
 
 
 @NgModule({
 	imports: [
-		TooltipModule.forRoot(),
 		RouterModule.forRoot(routes, { useHash: false }),
 		HttpModule,
 		BrowserModule,
 		FormsModule,
-		TooltipModule,
 	],
 	declarations: [
 		AppComponent,
 		HomeComponent,
+		ChatComponent,
 		JokeListComponent,
 	],
 	providers: [
 		AlertService,
 		DownloadJokeService,
-		StorageService,
 	],
 	bootstrap: [ AppComponent ]
 })

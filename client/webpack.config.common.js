@@ -6,8 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: {
-		polyfills: './polyfills.ts',
-		app: './main.ts'
+		polyfills: './src/polyfills.ts',
+		app: './src/main.ts'
 	},
 	resolve: {
 		extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html'],
@@ -61,9 +61,9 @@ module.exports = {
 				test: /\.scss$/,
 				exclude: path.join(__dirname, 'src', 'styles'),
 				use: [
-					// 'raw-loader',
-					'to-string-loader',
-					'css-loader',
+					'raw-loader',
+					// 'to-string-loader',
+					// 'css-loader',
 					'postcss-loader',
 					'sass-loader?sourceMap'
 				]
@@ -112,7 +112,7 @@ module.exports = {
 
 		// Inject script and link tags into html files
 		new HtmlWebpackPlugin({
-			template: 'public/index.html',
+			template: 'src/public/index.html',
 			chunksSortMode: 'dependency'
 		}),
 
