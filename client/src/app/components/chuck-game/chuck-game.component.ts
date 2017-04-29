@@ -88,6 +88,7 @@ export class ChuckGameComponent implements OnInit {
 	ngOnDestroy() {
 		// We don't want to get animationFrames anymore
 		this.destroyed = true;
+		// Remove listeners
 		this.keyLeft && this.keyLeft.delete();
 		this.keyRight && this.keyRight.delete();
 		this.keySpace && this.keySpace.delete();
@@ -178,10 +179,12 @@ export class ChuckGameComponent implements OnInit {
 		// Move enemies & bullets
 		for (let enemy of this.enemies) {
 			enemy.position.y += enemy.vy * dt;
+			// Out of the map
 			if (enemy.position.y > settings.bg.height + 40) enemy.isKilled = true;
 		}
 		for (let bullet of this.bullets) {
 			bullet.position.y += bullet.vy * dt;
+			// Out of the map
 			if (bullet.position.y < -40) {
 				bullet.isKilled = true;
 				continue;
@@ -199,7 +202,7 @@ export class ChuckGameComponent implements OnInit {
 			}
 		}
 
-		// Killed
+		// Killed enemies and bullets
 		let killedEnemy = this.enemies.filter(e => e.isKilled);
 		for (let enemy of killedEnemy) {
 			enemy.destroy();
@@ -213,7 +216,6 @@ export class ChuckGameComponent implements OnInit {
 
 		// Render
 		this.renderer.render(this.stage);
-
 		// Requesting next animation frame
 		(!this.destroyed) && requestAnimationFrame(t => this.render(t));
 	}

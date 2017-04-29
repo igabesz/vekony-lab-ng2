@@ -1,0 +1,20 @@
+<h2>Draw Chuck</h2>
+
+<div style="height: 0; width: 0; overflow: hidden;">
+	<img #chuckImg src="../../../img/chuck.png">
+	<img #boomImg src="../../../img/boom.png">
+</div>
+
+<div>
+	<canvas #canvas [style.width.px]="width" [style.height.px]="height" [width]="width" [height]="height"></canvas>
+</div>
+
+<div>
+	<button class="btn btn-primary" (click)="drawChuck()">Draw Chuck</button>
+	<button class="btn btn-primary" (click)="drawBoom()"> Draw Boom</button>
+	<button class="btn btn-danger" (click)="clear()">Clear</button>
+</div>
+
+<div>
+	<button class="btn btn-link" routerLink="">Back to Home</button>
+</div>

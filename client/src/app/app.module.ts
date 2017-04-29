@@ -12,6 +12,7 @@ import { HomeComponent } from './home.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
 import { ChuckGameComponent } from './components/chuck-game/chuck-game.component';
+import { ChuckDrawComponent } from './components/chuck-draw/chuck-draw.component';
 
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +30,9 @@ const routes: Route[] = [{
 }, {
 	path: 'game',
 	component: ChuckGameComponent,
+}, {
+	path: 'draw',
+	component: ChuckDrawComponent,
 }];
 
 
@@ -45,6 +49,7 @@ const routes: Route[] = [{
 		ChatComponent,
 		JokeListComponent,
 		ChuckGameComponent,
+		ChuckDrawComponent,
 	],
 	providers: [
 		AlertService,

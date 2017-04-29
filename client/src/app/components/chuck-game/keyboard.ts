@@ -1,4 +1,6 @@
-// From: https://github.com/kittykatattack/learningPixi
+// From: https://github.com/kittykatattack/learningPixi with major improvements
+// Note that there are better solutions with Angular2's HostListener: @HostListener('document:keydown')
+// HostListener: https://angular.io/docs/ts/latest/guide/attribute-directives.html
 
 export interface KeyboardListener {
 	press: (event: any) => any;
