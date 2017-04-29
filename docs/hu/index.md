@@ -6,7 +6,7 @@ Az alábbiakban az utolsó 4 Angular2-es labor anyagait láthatjátok.
 
 1. [Install](1-install.md): Projekt telepítése, elindítása
 2. [Projekt felépítése](2-project.md): Hogy eligazodj a projektben
-3. [Webpack](3-webpack): Build folyamat és Webpack bemutatása
+3. [Webpack](3-webpack.md): Build folyamat és Webpack bemutatása
 4. [Routing](4-routing.md): Az Angular2 routing megoldásának a bemutatása
 5. [Chuck Norris viccek](5-joke-list.md): Itt a HTTP szolgáltatást és a különböző aszinkronitás-kezelési módszereket vizsgáljuk
 6. [Chuck Norris rajzolás](6-draw-chuck.md): Canvas alapok, ViewChild
