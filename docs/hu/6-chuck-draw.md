@@ -68,11 +68,45 @@ Canvas-re rajzolni lehet 2D-ben és WebGL segítségével. Utóbbi nagyon izgalm
 Gyakorlati alkalmazásokban a canvas-t rendszerint valamilyen keretrendszerrel használjuk, pl. [PIXI](http://www.pixijs.com/), [EaselJS](http://www.createjs.com/easeljs), vagy [Phaser](http://phaser.io/).
 
 
-## A BLOB-ok
+## File API és BLOB-ok
 
-> **Kiegészítő anyag**
+> **Kiegészítő anyag**. Nem kérjük számon.
 
-WIP
+A File API segítségével a böngészőbe tudunk feltölteni fájlokat -- jelen esetben képeket --, és a feltöltött fájlokat tudjuk olvasni, elmenteni, feltölteni egy szerverre AJAX hívások segítségével, stb.
+
+A File API részei a következők:
+
+- `Blob` típus (Binary Large OBject) -- ld. alább
+- A `Blob` típust kiterjesztő `File` típus -- ld. alább
+- Fájlfeltöltés input elemekkel: `<input type="file">`
+- Drag & Drop támogatás fájlokra
+- `FileReader`: feltöltött fájl olvasása szolgáló interfész
+- További segédfüggvények / meglévő függvények kiterjesztései:
+	- `URL.createObjectURL()`
+	- `createImageBitmap()`
+	- `XMLHttpRequest.send()`
+
+> Részletes dokumentáció az [MDN-en](https://developer.mozilla.org/en-US/docs/Web/API/File).
+
+A Blob és a File interfésze a TypeScript definíciós fájlokból:
+
+```
+interface Blob {
+	readonly size: number;
+	readonly type: string;
+	msClose(): void;
+	msDetachStream(): any;
+	slice(start?: number, end?: number, contentType?: string): Blob;
+}
+
+interface File extends Blob {
+	readonly lastModifiedDate: any;
+	readonly name: string;
+	readonly webkitRelativePath: string;
+}
+```
+
+A fájl API támogatottsága bizonyos megkötésekkel [elég széleskörű](http://caniuse.com/#feat=fileapi).
 
 
 ## Angular2 lifecycle
