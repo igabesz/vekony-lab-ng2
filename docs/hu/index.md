@@ -2,8 +2,6 @@
 
 Az alábbiakban az utolsó 4 Angular2-es labor anyagait láthatjátok.
 
-**A dokumentáció még fejlesztés alatt áll!**
-
 1. [Install](1-install.md): Projekt telepítése, elindítása
 2. [Projekt felépítése](2-project.md): Hogy eligazodj a projektben
 3. [Webpack](3-webpack.md): Build folyamat és Webpack bemutatása
@@ -19,3 +17,5 @@ Mint látható, nem szigorúan az órai anyagok sorrendjében megyünk, de a lea
 - Második óra: 4. és 6. pont
 - Harmadik óra: 7. pont
 - Negyedik óra: 3. és 8. pont
+
+Ha valami kimaradt, vagy hibát vettél észre, írj ki egy issue-t vagy küldj egy PR-t!

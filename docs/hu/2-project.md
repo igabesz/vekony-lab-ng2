@@ -30,7 +30,7 @@ Itt a szokásos Angular2-es felépítést használjuk.
 - **styles/**
 	- **styles.scss**: Projekt szintű stílusok
 - **main.ts**: Ezzel kezdődik az Angular2 betöltése
-- **polyfill.ts**: Ez az Angular2 előtt hívódik meg, hogy betömködje a böngésző hiányosságait
+- **polyfill.ts**: Ez az Angular2 előtt fut le, hogy betömködje a böngésző hiányosságait
 
 Elsősorban a `client/src/app` mappában fogunk dolgozni.
 

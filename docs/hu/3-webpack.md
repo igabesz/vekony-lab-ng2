@@ -6,7 +6,7 @@ Itt az egész repót átírtam, hogy Webpack-et használjunk.
 
 ## Na de mi az a build?
 
-A forráskódot TypeScript-ben írjuk, mert ez sokkal jobb mint natív JS-t írni.
+A forráskódot TypeScript-ben írjuk, mert ez sokkal jobb, mint natív JS-t írni.
 Viszont a böngészők nem tudnak TS-t futtatni, csak JS-t,
 ezért a megírt kódokat le kell fordítani a böngésző által is emészthető formátumra.
 
@@ -69,12 +69,12 @@ Külön a HTML fájloknál a minification a legjellemzőbb különálló build l
 
 A build folyamatban képek felbontását és méretezését is szokás tekergetni.
 Pl. nem akarunk böngészőkben nyomtatási minőségű fájlokat letölteni.
-Rá lehet bízni a build rendszerre, hogy a képeken végezzen megfelelő mértecsökkentő transzformációkat.
+Rá lehet bízni a build rendszerre, hogy a képeken végezzen megfelelő méretcsökkentő transzformációkat.
 
 
 ## Webpack
 
-A Webpack egy igen komplex build keretrendszer, amiben rengeteg részletkérdést lehet bellítani.
+A Webpack egy igen komplex build keretrendszer, amiben rengeteg részletkérdést lehet beállítani.
 A rendszer erejét az adja, hogy számtalan plugin segítségével lehet különböző működéseket beállítani és finomhangolni.
 
 > **Pro tipp**: Ha egy nagy projektnél Webpack-et kell tekergetned,

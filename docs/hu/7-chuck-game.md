@@ -33,7 +33,6 @@ Itt néhány alapgondolatot ismertetünk a PIXI-ről.
 
 **Rajzolás módja**: Kérünk egy rajzolási callback-et a `requestAnimationFrame` segítségével. Ha folyamatos újrarajzolást szeretnénk, akkor minden rajzolás végén kérjünk egy újabb visszahívást. Az ilyen hívásokban megkapjuk az első hívás óta eltelt időt is.
 
-
 > **Megjegyzés**: Ha a böngésző tab a háttérben van, akkor a böngésző sokszor nem ütemez abban a tabban `requestAnimationFrame`-et. Ez fura jelenségekhez tud vezetni.
 
 
@@ -43,7 +42,7 @@ A kód nagyon szépen dokumentált. Néhány dolgot emelünk csak ki.
 
 - A Webpack miatt a TS fájl elején behivatkozzuk a felhasználandó képeket.
 	- Ez kizárólag arra kell, hogy jelezzük a Webpack build számára, hogy ezeket a képeket se hagyja ki a build folyamatból.
-	- Jelen esetben ez azt jelenti, hogy másolja át a képket az `src/images` mappából a `dist/images` mappába.
+	- Jelen esetben ez azt jelenti, hogy másolja át a képeket az `src/images` mappából a `dist/images` mappába.
 	- Megjegyzés: Megoldható, hogy a Webpack egy teljes mappát átmásoljon a build folyamán, csak a mostani konfig nem tartalmazza.
 - A `components/chuck-game/keyboard.ts` fájlban a `keyboard` függvénnyel tudunk feliratkozni a billentyűnyomásra.
 	- Erre is van jobb megoldás: Az Angular2-ben lehet `HostListener`-t létrehozni, amiben fel lehet iratkozni a billentyűnyomásra, de ez nem tananyag.

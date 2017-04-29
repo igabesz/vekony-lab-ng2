@@ -35,7 +35,7 @@ A `Promise` osztály sokkal átláthatóbbá teszi az aszinkronitást. Az ES2015
 - [-] Szokatlan a vezérlési logikája
 - [-] Bőbeszédű, sok a kód
 
-> **Megjegyzés**: A szokatlan vezérlési logika alatt azt értem, hogy a `Promise` konstruktorában megadott függvény kapja a `resolve` és `reject` callback függvényeket paraméterként; ezekkel nekünk kell valamit csinálnunk a függvényben. Így a konstruktorban megadott függvény a szinkron futás részének tekinthető. Ha neked nem szokatlan vagy már megszoktad,az jó.
+> **Megjegyzés**: A szokatlan vezérlési logika alatt azt értem, hogy a `Promise` konstruktorában megadott függvény kapja a `resolve` és `reject` callback függvényeket paraméterként; ezekkel nekünk kell valamit csinálnunk a függvényben. Így a konstruktorban megadott függvény a szinkron futás részének tekinthető. Ha neked nem szokatlan vagy már megszoktad, az jó.
 
 ### `async`-`await`
 
@@ -44,7 +44,7 @@ Ez egy Promise-ra épülő megoldás, ami látszólag szinkronná teszi a végre
 - Egy `async function`-ben tudjuk használni az `await` kulcsszót
 - Az `await` segítségével várakozhatunk egy másik `async` függvényre, vagy bármire, ami `Promise`-t ad vissza
 	- A Promise teljesülésekor megkapjuk az eredményt (mint a `.then()`-ben megadott callback)
-	- A Promise hibája esetén eldobódik az a hiba, amit amúgy a `.catch()`-ben kapnánk, ezt rendes `try`-`catch` blokkal tudjuk elkapni
+	- A Promise hibája esetén eldobja azt a hibát, amit amúgy a `.catch()`-ben kapnánk, ezt rendes `try`-`catch` blokkal tudjuk elkapni
 - Egy `async` függvény **mindig** Promise-szal tér vissza
 	- Kívülről tudjuk úgy kezelni, mintha egy nem `async` függvény lenne Promise visszatérési értékkel
 	- Így lehet egy **nem** `async` függvényből meghívni egy `async` függvényt
@@ -56,12 +56,12 @@ Pro-kontra érvek:
 - [+] Nem rontja el a kompatibilitást
 - [-] Komplex adatfolyamok kezelésére még mindig nem optimális
 - [-] Ne felejtsük el, hogy a kód továbbra is aszinkron marad, bár szinkronnak látszik
-- [-] Bonyolultabb mint egy callback
+- [-] Bonyolultabb, mint egy callback
 
 
 ### RxJs `Observable`
 
-Az Angular2 csapata a belső aszinkron műveleteket RxJs alapokra helyezte. Ez egy elég magas szintű adatfolyam-vezérlő rendszer, amivel komplex feldolgozásokat lehet megadni. Éppen ezért komplexebb mint a fenti módszerek, viszont ez mind közül a legerősebb.
+Az Angular2 csapata a belső aszinkron műveleteket RxJs alapokra helyezte. Ez egy elég magas szintű adatfolyam-vezérlő rendszer, amivel komplex feldolgozásokat lehet megadni. Éppen ezért komplexebb, mint a fenti módszerek, viszont ez mind közül a legerősebb.
 
 - [+] Nagyon erős adatfolyam alapú megoldás
 - [+] Az Angular2 szemléletmódjához jól illeszkedik

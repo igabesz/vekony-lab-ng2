@@ -1,10 +1,10 @@
-# Webpack onfigurációs lépések
+# Webpack konfigurációs lépések
 
 > "Here be dragons"
 
 A `webpack.config.common.js` fájlban a konfigurációs objektum főbb property-jei alapján megyünk végig.
 
-**`entry`**: Ezek azok a fájlok, ahonnan elkezdődik a függőségek összegyűjtése. Az egyes belépési pontokból általában egy-egy chuck-ot (bundle-t) készítünk.
+**`entry`**: Ezek azok a fájlok, ahonnan elkezdődik a függőségek összegyűjtése. Az egyes belépési pontokból általában egy-egy ~~Chuck-ot~~ chunk-ot (bundle-t) készítünk.
 Sokszor szokott itt szerepelni egy `vendor.ts` is, ami most itt nem szerepel. Erről majd alább részletesen.
 
 **`resolve.extensions`**: Hogy ne kelljen mindenhova kiterjesztést írni.

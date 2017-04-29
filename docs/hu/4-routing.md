@@ -11,7 +11,7 @@ Az Angular2 két routing megoldást tesz lehetővé.
 
 **Hash routing**: Ilyenkor az aktuális route-ot a hash után tesszük, pl. `http://localhost:8080/#/item-details;id=42`. (Ilyen route az alkalmazásban nincs, csak példaként írtuk.) Ilyenkor a böngésző a `http://localhost:8080/` oldalt fogja lekérni a szervertől.
 
-**HTML5 routing**: Ebben az esetben nincs hash. Az előző példa mintájára: `http://localhost:8080/item-details&id=42`. Ilyenkor a szerverre a `http://localhost:8080/item-details/` lekérés fog elmenni, amire a szervernek ugyanazt a választ kell adnia mint a `http://localhost:8080/` lekérésre.
+**HTML5 routing**: Ebben az esetben nincs hash. Az előző példa mintájára: `http://localhost:8080/item-details&id=42`. Ilyenkor a szerverre a `http://localhost:8080/item-details/` lekérés fog elmenni, amire a szervernek ugyanazt a választ kell adnia, mint a `http://localhost:8080/` lekérésre.
 
 Az általános javaslat az, hogy próbáljuk a HTML5 routing-ot használni, és ha valamiért nem megy (pl. nem tudjuk megfelelően konfigurálni a szerver routing-ot), akkor fallback-ként menni fog a Hash routing.
 
@@ -40,7 +40,7 @@ A következő lépésekre van szükség. Javasolt az `app.module.ts`, `app.compo
 	- Jelen kódbázisban nem szerepel, de betölthető tetszőleges komponensbe, szolgáltatásba DI segítségével (tudod, konstruktorban)
 	- Kódból tudunk vele navigálni: `router.navigate(['item-details', { id: 42 }])`
 
-> **Debug tipp**: Ne felejsd el az Angular-os modulban is deklarálni a komponenseket, amiket a Routing-ban megadsz!
+> **Debug tipp**: Ne felejtsd el az Angular-os modulban is deklarálni a komponenseket, amiket a Routing-ban megadsz!
 
 
 ## További részletek

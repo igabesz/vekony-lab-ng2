@@ -16,6 +16,7 @@ A WebSocket szabvány lehetővé tesz valósidejű, valóban kétirányú (full-
 	- Bonyolultabb, szerveroldali támogatás is kell hozzá
 	- Kisebb szerveroldali terhelés, bár a nyitva tartott kapcsolatok és a timeout miatti rendszeres újraépítés így is pluszköltség
 	- Ronda!
+- Nem szabványos megoldások használata
 
 Ezeket a megoldásokat váltja le a WebSocket használata. A WebSocket egy TCP jellegű kapcsolatot biztosít szerver és kliens között, ahol bármelyik fél küldhet üzenetet. A Kapcsolat felépülése után egy-egy üzenet küldése minimális plusz terhelést jelent.
 
@@ -61,3 +62,6 @@ A `ChatComponent` kódja rövid és jól dokumentált. Pár érdekesség:
 Próbáld meg menet közben leállítani a szervert, majd újraindítani, miközben a chat oldal van megnyitva. Ezért szeretjük a SocketIO-t.
 
 > **Megoldás**: igen, mert nem függ a DOM-tól a kód; és nem, mert a socket kapcsolatot le kell bontani, ha megsemmisül a komponens. Különben két kapcsolat fog létezni, amikor másodszor a chat oldalra navigálunk.
+
+
+[Vissza](index.md)

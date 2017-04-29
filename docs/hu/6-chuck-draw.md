@@ -16,7 +16,7 @@ A váltás okai:
 
 - A Flash nem szabvány, hanem egy cég saját tulajdona
 - Biztonsági rések
-- Teljesítménykérdések, mobilokon aksi
+- Teljesítménykérdések, mobilokon akkumulátor
 - Több platformon nem támogatott
 - Kilóg a webes környezetből (pl. keresésoptimalizálás, együttműködés az oldal többi részével, egyéb webes megoldásokkal)
 - Külön kell telepíteni
