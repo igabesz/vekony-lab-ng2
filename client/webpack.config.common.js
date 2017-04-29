@@ -35,10 +35,11 @@ module.exports = {
 				// include: path.join(__dirname, 'node_modules'),
 				loader: 'file-loader?name=fonts/[name].[hash].[ext]?'
 			},
+			// Won't use hashes here because of PIXI
 			{
 				test: /\.(png|jpe?g|gif|svg)$/,
-				include: path.join(__dirname, 'src'),
-				loader: 'file-loader?name=[path][name].[hash].[ext]&context=src'
+				include: [path.join(__dirname, 'src')],
+				loader: 'file-loader?name=[path][name].[ext]&context=src'
 			},
 
 			// support for .scss files

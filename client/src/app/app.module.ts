@@ -11,6 +11,7 @@ import { AppComponent }	from './app.component';
 import { HomeComponent } from './home.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
+import { ChuckGameComponent } from './components/chuck-game/chuck-game.component';
 
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +26,9 @@ const routes: Route[] = [{
 }, {
 	path: 'chat',
 	component: ChatComponent,
+}, {
+	path: 'game',
+	component: ChuckGameComponent,
 }];
 
 
@@ -40,6 +44,7 @@ const routes: Route[] = [{
 		HomeComponent,
 		ChatComponent,
 		JokeListComponent,
+		ChuckGameComponent,
 	],
 	providers: [
 		AlertService,
