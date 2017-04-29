@@ -3,8 +3,15 @@
 
 ## Előfeltételek
 
-- Legyen feltelepítve a `node`
-- `npm install`
+- Legyen feltelepítve a [NodeJS](https://nodejs.org/en/) és Git
+- Nyiss meg egy parancssort!
+	- Windows-on: Windows+R, `cmd`
+	- Linuxon: ugye nem kell magyarázni? :)
+- Navigálj abba a mappába, ahova le akarod tölteni ezt a repót
+- Töltsd le ezt a repót:
+	- `git clone git@github.com:igabesz/vekony-lab-ng2.git vekony-lab` (így `vekony-lab` lesz az új mappa neve)
+	- `cd vekony-lab`
+	- `npm install`: Függőségek telepítése
 
 
 ## Futtatás
@@ -25,7 +32,10 @@ de fájlkiszolgáló szerverként nem működik: `npm run watch:client`.
 Ilyenkor nekünk kell indítani egy külön szervert, ami a fájlokat kiszolgálja.
 
 
-## A Chat alkalmazás futtatása
+### A chat alkalmazás futtatása
 
 - Build: `npm run build:server`
 - Indítás: `npm run start:server`
+
+
+[Vissza](index.md)
