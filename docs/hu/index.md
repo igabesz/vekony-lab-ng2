@@ -9,7 +9,7 @@ Az alábbiakban az utolsó 4 Angular2-es labor anyagait láthatjátok.
 3. [Webpack](3-webpack.md): Build folyamat és Webpack bemutatása
 4. [Routing](4-routing.md): Az Angular2 routing megoldásának a bemutatása
 5. [Chuck Norris viccek](5-joke-list.md): Itt a HTTP szolgáltatást és a különböző aszinkronitás-kezelési módszereket vizsgáljuk
-6. [Chuck Norris rajzolás](6-draw-chuck.md): Canvas alapok, ViewChild
+6. [Chuck Norris rajzolás](6-chuck-draw.md): HTML és canvas alapok, ViewChild, Angular2 lifecycle
 7. [Lövöldözős játék](7-chuck-game.md): PIXI keretrendszer használatával készített egyszerű lövöldözős játék
 8. [Chat alkalmazás](8-chat.md): SocketIO csomagot használó WebSocket alapú chat alkalmazás
 

@@ -1,14 +1,17 @@
 <h2>Draw Chuck</h2>
 
+<!-- Preload images here -->
 <div style="height: 0; width: 0; overflow: hidden;">
 	<img #chuckImg src="../../../img/chuck.png">
 	<img #boomImg src="../../../img/boom.png">
 </div>
 
+<!-- Drawing here -->
 <div>
 	<canvas #canvas [style.width.px]="width" [style.height.px]="height" [width]="width" [height]="height"></canvas>
 </div>
 
+<!-- Loader commands -->
 <div>
 	<button class="btn btn-primary" (click)="drawChuck()">Draw Chuck</button>
 	<button class="btn btn-primary" (click)="drawBoom()"> Draw Boom</button>
