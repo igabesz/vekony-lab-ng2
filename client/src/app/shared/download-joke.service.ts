@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable, Subject } from 'rxjs';
-import ChuckJoke from '../models/chuck-joke';
+import ChuckJoke from './chuck-joke';
 
 
 /** The format of the server, see here:

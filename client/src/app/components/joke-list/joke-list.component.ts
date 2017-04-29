@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
-import { DownloadJokeService } from '../../services/download-joke.service';
-import { AlertService } from '../../services/alert.service';
-import ChuckJoke from '../../models/chuck-joke';
+import { DownloadJokeService } from '../../shared/download-joke.service';
+import { AlertService } from '../../shared/alert.service';
+import ChuckJoke from '../../shared/chuck-joke';
 import { Subscription } from 'rxjs';
 
 

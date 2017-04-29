@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Route }	from '@angular/router';
 
-import { AlertService } from './services/alert.service';
-import { DownloadJokeService } from './services/download-joke.service';
+import { AlertService } from './shared/alert.service';
+import { DownloadJokeService } from './shared/download-joke.service';
 
 import { AppComponent }	from './app.component';
-import { HomeComponent } from './home.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { HomeComponent } from './components/home/home.component';
 import { JokeListComponent } from './components/joke-list/joke-list.component';
 import { ChuckGameComponent } from './components/chuck-game/chuck-game.component';
 import { ChuckDrawComponent } from './components/chuck-draw/chuck-draw.component';
